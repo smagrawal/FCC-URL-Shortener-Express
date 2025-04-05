@@ -50,7 +50,7 @@ app.post("/api/shorturl",(req,res) =>{
 
 })
 
-app.get("/api/short_url/:short_url",async(req,res)=>{
+app.get("/api/shorturl/:short_url",async(req,res)=>{
   const short_url = req.params.short_url;
   const urlDoc = await urls.findOne({short_url:+short_url});
   res.redirect(urlDoc.url);
